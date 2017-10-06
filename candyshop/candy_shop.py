@@ -19,7 +19,7 @@
 
 class CandyShop:
 
-    def __init__(self, sugar = 0, income = 0, sweets, lollipop_price = 10, candy_price = 20):
+    def __init__(self, sugar, income, sweets, lollipop_price, candy_price):
         self.sugar = 0
         self.income = 0
         self.sweets = {}
