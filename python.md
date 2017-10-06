@@ -36,3 +36,4 @@ Methods are similar to functions, but there are main differences. Methods are al
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
+Constructors are special methods used in classes. The constructor of the given class is always going to be invocated whenever you create a new instance object of that given class - and it's going to be called first. The name of the constructor is always "__init__()".
