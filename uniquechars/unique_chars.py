@@ -25,7 +25,6 @@ def unique_characters(string):
     for key in list(dict_of_chars.keys()):
         if dict_of_chars[key] > 1:
             del dict_of_chars[key]
-    return list(dict_of_chars[key])
-
+    return list(dict_of_chars.keys())
 
 print(unique_characters('anagram'))
