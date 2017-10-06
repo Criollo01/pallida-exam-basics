@@ -3,16 +3,6 @@
 # Create basic unit tests for it with at least 3 different test cases
 # Should print out:
 # ["n", "g", "r", "m"]
-'''
-def unique_characters(word):
-    unique_character_list = []
-    for char in word:
-        if char not in unique_character_list:
-            unique_character_list.append(char)
-    return unique_character_list
-
-print(unique_characters("anagram"))
-'''
 
 def unique_characters(string):
     dict_of_chars = {}
