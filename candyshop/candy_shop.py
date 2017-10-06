@@ -17,6 +17,41 @@
 # The CandyShop should be represented as string in this format:
 # "Inventory: 3 candies, 2 lollipops, Income: 100, Sugar: 400gr"
 
+class CandyShop:
+
+    def __init__(self, sugar = 0, income = 0, sweets, lollipop_price = 10, candy_price = 20):
+        self.sugar = 0
+        self.income = 0
+        self.sweets = {}
+        self.lollipop_price = lollipop_price
+        self.candy_price = candy_price
+    
+    def create_sweets(self, kind_of_sweets, amount):
+        self.sweets = {kind_of_sweets : amount}
+        if self.kind_of_sweets == "lollipop":
+            self.sugar -= 5 * amount
+        elif self.kind_of_sweets == "candy":
+            self.sugar -= 10 * amount
+    
+    def raise_prices(self, percentage):
+        self.lollipop_price += self.lollipop_price * (percentage / 100)
+        self.candy_price += self.candy_price * (percentage / 100)
+    
+    def sell(self, kind_of_sweets, amount):
+        if kind_of_sweets == "lollipop":
+            income += self.lollipop_price * amount
+            self.sweets[amount] -= amount
+        if kind_of_sweets == "candy":
+            income += self.candy_price * amount
+            self.sweets[amount] -= amount
+
+    def buy_sugar(self, sugar_amount):
+        self.sugar += sugar_amount
+        self.income -= sugar_amount * 0,1
+
+    def __repr__(self):
+        return "Inventory: y candies, x lollipops, Income: {}, Sugar: {}".format(self.income, self.sugar)
+
 candy_shop = CandyShop(300)
 candy_shop.create_sweets("candy")
 candy_shop.create_sweets("candy")
@@ -26,7 +61,7 @@ print(candy_shop)
 # Should print out:
 # Invetory: 2 candies, 2 lollipops, Income: 0, Sugar: 270gr
 candy_shop.sell("candy", 1)
-print(candy_shop
+print(candy_shop)
 # Should print out:
 # "Invetory: 1 candies, 2 lollipops, Income:20, Sugar: 285gr"
 candy_shop.raise_prices(5)
