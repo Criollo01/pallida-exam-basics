@@ -32,8 +32,7 @@ The application is accepted if:
 
 ###  What is the difference between a function and a method? [2p]
 #### Your answer:
-[add your answer here]
+Methods are similar to functions, but there are main differences. Methods are always used inside classes, they work with data within the given class, in associated with the given object they are called on. Functions are not connected to any class or object, they stand alone, and can work with arguments that are given to them. Functions can be associated with objects, but still will exist outside the class, so it can't be called a method.
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
-[add your answer here]
