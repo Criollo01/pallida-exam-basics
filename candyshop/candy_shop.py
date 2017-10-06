@@ -52,6 +52,7 @@ class CandyShop:
     def __repr__(self):
         return "Inventory: y candies, x lollipops, Income: {}, Sugar: {}".format(self.income, self.sugar)
 
+
 candy_shop = CandyShop(300)
 candy_shop.create_sweets("candy")
 candy_shop.create_sweets("candy")
